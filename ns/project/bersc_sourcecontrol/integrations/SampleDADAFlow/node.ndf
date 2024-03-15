@@ -80,7 +80,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">bernhard.schoormann</value>
-    <value name="lastModifiedDate">1710510268750</value>
+    <value name="lastModifiedDate">1710510324503</value>
     <record name="edgeServer" javaclass="com.wm.util.Values">
       <value name="id">870542dfa2644e68be00bf3bfff1110d</value>
       <value name="group">default</value>
@@ -176,6 +176,24 @@
         </array>
       </record>
       <null name="/0/0/2/0/0"/>
+      <record name="/0/1" javaclass="com.wm.util.Values">
+        <null name="name"/>
+        <value name="itemType">SERVICES</value>
+        <record name="serviceInfo" javaclass="com.wm.util.Values">
+          <value name="groupDisplayName">Flow</value>
+          <value name="groupName">flow</value>
+          <null name="services"/>
+        </record>
+        <record name="serviceName" javaclass="com.wm.util.Values">
+          <value name="displayName">debugLog</value>
+          <value name="serviceName">pub.flow:debugLog</value>
+          <value name="transformerSupport">false</value>
+        </record>
+        <number name="ui_step_index" type="Long">8</number>
+        <number name="nodeIndex" type="Long">3</number>
+        <null name="mapSet"/>
+        <null name="outputMapSet"/>
+      </record>
       <record name="/1" javaclass="com.wm.util.Values">
         <value name="name">CATCH</value>
         <value name="itemType">CONTROLS</value>
