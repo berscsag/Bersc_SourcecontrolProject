@@ -7,6 +7,11 @@ packages:
   gitUrl: https://github.com/berscsag/Bersc_SourcecontrolProject
   gitUsername: berscsag
   gitBranch: main
+services:
+- serviceName: project.bersc_sourcecontrol.integrations:SampleDADAFlow
+  packages:
+  - name: Bersc_SourcecontrolProject
+    version: "1.0"
 configurationVariables:
   jdbc.jdbcTestPool.waitingThread: "0"
   jdbc.jdbcTestPool.minConns: "0"
