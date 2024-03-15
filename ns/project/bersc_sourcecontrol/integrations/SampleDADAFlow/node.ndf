@@ -80,7 +80,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">bernhard.schoormann</value>
-    <value name="lastModifiedDate">1710510230510</value>
+    <value name="lastModifiedDate">1710510268750</value>
     <record name="edgeServer" javaclass="com.wm.util.Values">
       <value name="id">870542dfa2644e68be00bf3bfff1110d</value>
       <value name="group">default</value>
@@ -213,6 +213,26 @@
         <number name="nodeIndex" type="Long">1</number>
         <null name="mapSet"/>
         <null name="outputMapSet"/>
+      </record>
+      <record name="/1/2" javaclass="com.wm.util.Values">
+        <value name="itemType">CONTROLS</value>
+        <value name="name">TRANSFORM</value>
+        <number name="ui_step_index" type="Long">11</number>
+        <number name="nodeIndex" type="Long">2</number>
+        <array name="map" type="object" depth="1">
+        </array>
+        <array name="mapSet" type="object" depth="1">
+        </array>
+        <array name="mapDelete" type="object" depth="1">
+        </array>
+        <array name="transformer" type="object" depth="1">
+        </array>
+        <array name="lookupTransformer" type="object" depth="1">
+        </array>
+      </record>
+      <record name="/1/2/0" javaclass="com.wm.util.Values">
+      </record>
+      <record name="/1/2/1" javaclass="com.wm.util.Values">
       </record>
     </record>
   </record>
