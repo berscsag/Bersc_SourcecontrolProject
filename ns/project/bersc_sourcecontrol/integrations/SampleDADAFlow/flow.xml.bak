@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="1.0" CLEANUP="false">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE TIMEOUT="" EXIT-ON="FAILURE" FORM="TRY">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH NAME="IF" LABELEXPRESSIONS="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="((%/Age%>&#39;60&#39;)&amp;&amp;((%/Gender%==&#39;Female&#39;)))" EXIT-ON="FAILURE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/Category;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">SpecialFemalecategory</value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</SEQUENCE>
+
+<SEQUENCE NAME="((%/Age%==&#39;&#39;)&amp;&amp;((%/Gender%==&#39;Male&#39;)))" EXIT-ON="FAILURE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/Category;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">SpecialMalecategory</value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</SEQUENCE>
+</BRANCH>
+</SEQUENCE>
+
+<SEQUENCE EXIT-ON="FAILURE" FORM="CATCH">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="NEW" EXIT-ON="FAILURE">
+  <COMMENT></COMMENT>
+</SEQUENCE>
+</SEQUENCE>
+</FLOW>
