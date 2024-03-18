@@ -7,6 +7,9 @@ packages:
   gitUrl: https://github.com/berscsag/Bersc_SourcecontrolProject
   gitUsername: berscsag
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.softwareag.com
+  wpmRegistry: softwareag
 services:
 - serviceName: project.bersc_sourcecontrol.integrations:SampleDADAFlow
   packages:
@@ -20,18 +23,68 @@ services:
   packages:
   - name: WmPublic
     version: 11.0.0.0.741
+- serviceName: project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1
+  packages:
+  - name: Bersc_SourcecontrolProject
+    version: "1.0"
 configurationVariables:
+  jdbc.jdbcTestPool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/jdbcTestPool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
+  : "{AES}Y5IgMqjfvkgbg7p5VUZztw=="
+  jdbc.jdbcTestPool.maxConns: "10"
+  jdbc.jdbcTestPool.userid: root
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
+  : ""
+  jdbc.jdbcTestPool.spyenabled: "false"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
+  : loginTimeout=60;
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
+  : 127.0.0.1
+  jdbc.jdbcTestPool.snoopenabled: "false"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
+  : "1"
+  jdbc.jdbcTestPool.spyparms: SpyAttributes=(log=(file)logs/spy/jdbcTestPool.log;logTName=yes;timestamp=yes)
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
+  : "false"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
+  : MySQL
   jdbc.jdbcTestPool.waitingThread: "0"
   jdbc.jdbcTestPool.minConns: "0"
   jdbc.jdbcTestPool.expireTime: "60000"
-  jdbc.jdbcTestPool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/jdbcTestPool.log;ddtdbg.ProtocolTraceShowTime=true
-  jdbc.jdbcTestPool.maxConns: "10"
-  jdbc.jdbcTestPool.userid: root
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
+  : "0"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
+  : Mysqldriver
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
+  : "10"
   jdbc.jdbcTestPool.driverAlias: MySQL Database Java Connector Driver
-  jdbc.jdbcTestPool.spyenabled: "false"
-  jdbc.jdbcTestPool.snoopenabled: "false"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
+  : root
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
+  : DADA_DemoDB
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
+  : "0"
   jdbc.jdbcTestPool.password: "{AES}er+I3U8nDVm8F4DBRST1+A=="
-  jdbc.jdbcTestPool.spyparms: SpyAttributes=(log=(file)logs/spy/jdbcTestPool.log;logTName=yes;timestamp=yes)
   jdbc.jdbcTestPool.dbURL: jdbc:mysql://mysql.test.local:3306/webm
   jdbc.jdbcTestPool.poolThreshold: "0"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
+  : ""
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
+  : tcp
   jdbc.jdbcTestPool.useSSL: "false"
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.Bersc_SourcecontrolProject.project.bersc_sourcecontrol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
+  : "0"
